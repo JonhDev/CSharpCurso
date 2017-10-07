@@ -8,15 +8,11 @@ namespace ClasePOO
 {
     public class Cliente
     {
-        public string Nombre { get; set; }
-        public float Saldo { get; set; }
-        public byte Edad { get; set; }
+        public string nombre { get; set; }
+        public float saldo { get; set; }
+        public byte edad { get; set; }
 
-        public Cliente(string nombre, float saldo, byte edad)
-        {
-            Nombre = nombre;
-            Saldo = saldo;
-            Edad = edad;
-        }
+
+
     }
 }

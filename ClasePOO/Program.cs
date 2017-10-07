@@ -8,40 +8,45 @@ namespace ClasePOO
 {
     class Program
     {
-        static Stack<int> t1 = new Stack<int>();
-        static Stack<int> t2 = new Stack<int>();
-        static Stack<int> t3 = new Stack<int>();
-        static Queue<int> t = new Queue<int>();
+        
 
         static void Main(string[] args)
         {
-            Banco b = new Banco();
-            b.Nombre = "Banco 1";
-            b.ImprimirSaldos();
-            b.DepositarSaldo(100000.0f, "Juan");
-            b.ImprimirSaldos();
-            Torres(3, 0);
-            Console.ReadKey();  
-            
-
-        }
-
-        static int Torres(int piezas, int movimientos)
-        {
-            if(movimientos == 0)
+            Banco banco = new Banco();
+            banco.nombre = "SERGIO";
+            int n;
+            do
             {
-                for (int i = 0; i < piezas; i++)
-                    t.Enqueue(i);
-            }
+                Console.WriteLine("[1] depositar");
+                Console.WriteLine("[2] mostrar informacion");
+                Console.WriteLine("[3] salir");
+                Console.WriteLine("elija opcion");
+                n=int.Parse(Console.ReadLine());
+                int c;
+                switch (n)
+                {
+                    case 1:
+                        float dep;
+                        Console.WriteLine("ingrese nuemro de  cliente");
+                        c = int.Parse(Console.ReadLine());
+                        Console.WriteLine("introduzca la cantida a depositar");
+                        dep = float.Parse(Console.ReadLine());
+                        banco.Depositar(dep,c);
+                        break;
 
-            t3.Push(t1.Pop());
-            t2.Push(t1.Pop());
-            t2.Push(t3.Pop());
-            t3.Push(t1.Pop());
-            t1.Push(t2.Pop());
-            t3.Push(t2.Pop());
-            t3.Push(t1.Pop());
-            return 0;
+                    case 2:
+                        Console.WriteLine("ingrese el numero del cliente ");
+                         c=int.Parse(Console.ReadLine());
+                        banco.Imprimir(c);
+                        
+                        break;
+
+
+                }
+       
+            } while (n!=3);
         }
+
+      
     }
 }
