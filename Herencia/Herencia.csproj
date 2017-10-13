@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{88E7AA75-4FDA-4A17-911D-F26E87BBDCF9}</ProjectGuid>
+    <ProjectGuid>{ED1763DF-038C-46DF-BD18-8B1FF45B2BD6}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Interfaces</RootNamespace>
-    <AssemblyName>Interfaces</AssemblyName>
+    <RootNamespace>Herencia</RootNamespace>
+    <AssemblyName>Herencia</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,14 +42,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractPolygon.cs" />
-    <Compile Include="Cuadrado.cs" />
-    <Compile Include="IPolygon.cs" />
-    <Compile Include="Polygon.cs" />
+    <Compile Include="Administracion.cs" />
+    <Compile Include="Escuela.cs" />
+    <Compile Include="Estudiante.cs" />
+    <Compile Include="Jerarquia\Empleado.cs" />
+    <Compile Include="Jerarquia\Oficial.cs" />
+    <Compile Include="Jerarquia\Operario.cs" />
+    <Compile Include="Persona.cs" />
+    <Compile Include="Profesor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Square.cs" />
-    <Compile Include="Triangulo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

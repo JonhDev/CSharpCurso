@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Interfaces
 {
-    class Cuadrado : IPolygon
+    class Cuadrado: Polygon 
     {
         public int SidesNumber { get; set; }
         public int SideLength { get; set; }
@@ -19,7 +19,7 @@ namespace Interfaces
 
         public double GetArea()
         {
-            return Math.Pow(SideLength, 2);
+            return SidesNumber * 2;
         }
 
         public double GetPerimeter()
