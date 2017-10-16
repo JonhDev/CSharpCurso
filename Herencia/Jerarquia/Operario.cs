@@ -8,6 +8,7 @@ namespace Herencia.Jerarquia
 {
     public class Operario: Empleado
     {
+        public int OperarioTest { get; set; }
         public Operario(string nombre): 
             base(nombre)
         {

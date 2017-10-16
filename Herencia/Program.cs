@@ -33,11 +33,18 @@ namespace Herencia
 
             //esc1.Consultar(Personal.Profesor);
 
+            object objeto = new Empleado("Juan");
             Empleado empleado = new Empleado("Raul");
+
+            Empleado test = new Operario("Jose");
+
+            Empleado emple = objeto as Empleado;
+
             Console.WriteLine(empleado.ToString());
 
             Operario operario = new Operario("Jose");
             Console.WriteLine(operario.ToString());
+            
 
             Oficial oficial = new Oficial("zacarias");
             Console.WriteLine(oficial.ToString());

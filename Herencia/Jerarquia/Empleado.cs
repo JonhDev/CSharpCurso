@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Herencia.Jerarquia
 {
-    public class Empleado
+    public class Empleado: Object
     {
         public string Nombre { get; }
 
