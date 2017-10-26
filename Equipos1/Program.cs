@@ -10,10 +10,13 @@ namespace Equipos1
     {
         static void Main(string[] args)
         {
-
             ManejadorListas mane = new TestListas();
-            mane.Agregar("12");
-            Console.WriteLine(mane.Consultar(0).ToString());
+            mane.Agregar("hola");
+            if (mane.Consultar(25) != null)
+                Console.WriteLine(mane.Consultar(25));
+        
+            else
+                Console.WriteLine("la posicion no ha sido asignada");
             Console.ReadKey();
         }
     }

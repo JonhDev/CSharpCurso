@@ -17,7 +17,14 @@ namespace Equipos1
 
         public override object Consultar(int index)
         {
-            return lista[index];
+            try
+            {
+                return lista[index];
+            }
+            catch (ArgumentOutOfRangeException e)
+            {
+                return null;
+            }
         }
 
         public override bool Eliminar(int index)
@@ -28,6 +35,11 @@ namespace Equipos1
                 return true;
             }
             else return false;
+        }
+
+        public void Saluda()
+        {
+            Console.WriteLine("Saludos");
         }
     }
 }
